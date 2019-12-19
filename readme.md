@@ -15,7 +15,7 @@ The Vagrantfile config can be specified to load ubuntu/xenial64 OS then be spun 
 Vagrant ssh allows the host machine to make a connection to the virtual machine which means we can use the git bash terminal to give commands via the command line to the virtual machine os.
 
 ## provision.sh
-The provision script which will have its path specified in the Vagrantfile can automate a lot of things fo us such as the installing of scripts/dependencies and libraries. -y means the terminal will auto select yes for any confirmations needed.
+The provision script which will have its path specified in the Vagrantfile can automate a lot of things for us such as the installing of scripts/dependencies and libraries. -y means the terminal will auto select yes for any confirmations needed.
 
 ## npm install and npm start
 This command installs a package, and any packages that it depends on. If the package has a package-lock or shrinkwrap file, the installation of dependencies will be driven by that, with an npm-shrinkwrap.json taking precedence if both files exist
@@ -23,3 +23,13 @@ This runs an arbitrary command specified in the package’s "start" property of 
 
 ## synced_folder
 Synced folders must be specified in the vagrantfile so that the virtual machine can navigate to it.
+
+
+# Task
+
+The main task was to execute the virtual machine and access the app-website on the port 3000. We achieved this by first:
+- setting up the vagrant file appropriately by assigning the synced folder on the host machine to the synced folder on the virtual machine,
+so that our virtual machine now has access to in this case the 'app' folder and can be accessed via the '/app' path in the vm.
+
+- config.vm.provison tells the virtual machine the location of the bash script that will auto install dependencies and auto execute commands, by telling
+it which path the provision script is in.

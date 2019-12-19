@@ -23,7 +23,9 @@ sudo npm install pm2 -g
 # navigates to directory to install the depenencies/librabries
 cd /app
 
-#reads the json object to get the dependencies.
+# reads the json object to get the dependencies., redds the package.json file to
+# find the depenencies that are needed to be installed. the package.json is
+# written in javascript.
 npm install
 
 # starts the app by reading the json "start" in the package

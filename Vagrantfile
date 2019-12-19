@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.10.100"
   config.hostsupdater.aliases = ["development.local"]
 
-  # Synced app folder
+  # Synced app folder  #host machine folder/virtual machine folder
   config.vm.synced_folder "app", "/app"
 
   # Provisioning
